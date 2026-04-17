@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>EmotiSense AI</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: linear-gradient(to right, #74ebd5, #ACB6E5);
+            text-align: center;
+        }
+
+        textarea {
+            width: 300px;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background: #333;
+            color: white;
+            border-radius: 10px;
+        }
+
+        .card {
+            background: white;
+            margin: 15px auto;
+            padding: 15px;
+            width: 300px;
+            border-radius: 15px;
+            box-shadow: 0px 0px 10px gray;
+        }
+
+        .warning {
+            color: red;
+            font-weight: bold;
+        }
+
+        a {
+            display: block;
+            margin: 10px;
+        }
+
+        canvas {
+            max-width: 400px;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+
+<body>
+
+<a href="/logout">Logout</a>
+
+<h1>🧠 EmotiSense AI</h1>
+
+<form method="POST">
+    <textarea name="entry" placeholder="Write your thoughts..." required></textarea><br><br>
+    <button type="submit">Analyze</button>
+</form>
+
+{% if warning %}
+<div class="warning">{{ warning }}</div>
+{% endif %}
+
+<h2>📊 Emotion Graph</h2>
+<canvas id="myChart"></canvas>
+
+<script>
+const data = {
+    labels: ['Happy', 'Sad', 'Neutral'],
+    datasets: [{
+        data: [{{happy}}, {{sad}}, {{neutral}}],
+        backgroundColor: ['green', 'red', 'orange']
+    }]
+};
+
+const config = {
+    type: 'pie',
+    data: data
+};
+
+new Chart(
+    document.getElementById('myChart'),
+    config
+);
+</script>
+
+<h2>📅 Entries</h2>
+
+{% for e in entries %}
+<div class="card">
+    <p><b>Date:</b> {{ e.date }}</p>
+    <p>{{ e.text }}</p>
+    <p><b>Emotion:</b> {{ e.emotion }}</p>
+</div>
+{% endfor %}
+
+</body>
+</html>
