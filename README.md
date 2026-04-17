@@ -37,13 +37,13 @@ EmotiSense-AI/
 ```
 
 ---
-<img width="500" height="320" alt="image" src="https://github.com/user-attachments/assets/89ea7591-7f1b-4c30-9573-38240018e244" />
+<img width="500" height="320" alt="image" src="https://github.com/user-attachments/assets/89ea7591-7f1b-4c30-9573-38240018e244" /> <br>
 
-<img width="500" height="320" alt="image" src="https://github.com/user-attachments/assets/032c3612-ef76-4598-a5f9-c474f8eb51d7" />
+<img width="500" height="320" alt="image" src="https://github.com/user-attachments/assets/032c3612-ef76-4598-a5f9-c474f8eb51d7" /> <br>
 
-<img width="500" height="320" alt="image" src="https://github.com/user-attachments/assets/6e06491d-64e9-4558-8985-22510b667ad8" />
+<img width="500" height="320" alt="image" src="https://github.com/user-attachments/assets/6e06491d-64e9-4558-8985-22510b667ad8" /> <br>
 
-<img width="500" height="320" alt="image" src="https://github.com/user-attachments/assets/12c54abd-b87b-4d60-bad0-6d25811af454" />
+<img width="500" height="320" alt="image" src="https://github.com/user-attachments/assets/12c54abd-b87b-4d60-bad0-6d25811af454" /> <br>
 
 
 ## ⚙️ Installation & Setup
